@@ -1,0 +1,452 @@
+*Basic SQL Questions*
+
+Q1. What is SQL?
+ans:-
+     SQL (Structured Query Language) is a standard language for managing and manipulating relational databases. It is used to query, insert, update, and delete data, as well as to define 
+     and manage database structures.
+
+
+
+Q2. Explain the purpose of SQL and its usage for querying, updating, and managing databases.
+ans:-
+     SQL is used to interact with relational databases, allowing users to query, update, and manage data. It helps retrieve, modify, and organize data efficiently using commands like 
+     SELECT, UPDATE, CREATE, and DROP.
+
+
+
+Q3. What are the different types of SQL statements?
+ans:-
+     The different types of SQL statements are:
+     1. DQL (Data Query Language)**: `SELECT` (used to query data)
+     2. DML (Data Manipulation Language)**: `INSERT`, `UPDATE`, `DELETE` (used to manipulate data)
+     3. DDL (Data Definition Language)**: `CREATE`, `ALTER`, `DROP` (used to define or modify database structures)
+     4. DCL (Data Control Language)**: `GRANT`, `REVOKE` (used to manage permissions)
+     5. TCL (Transaction Control Language)**: `COMMIT`, `ROLLBACK`, `SAVEPOINT` (used to manage transactions)
+
+
+
+Q4. Discuss DDL (Data Definition Language), DML (Data Manipulation Language), DCL (Data Control Language), and TCL (Transaction Control Language).
+ans:-
+     DDL (Data Definition Language)**: Defines and manages database structures. Commands include `CREATE`, `ALTER`, `DROP`.
+     DML (Data Manipulation Language)**: Manages data within the database. Commands include `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
+     DCL (Data Control Language)**: Controls access to data. Commands include `GRANT` (give permissions) and `REVOKE` (remove permissions).
+     TCL (Transaction Control Language)**: Manages transactions within the database. Commands include `COMMIT`, `ROLLBACK`, and `SAVEPOINT`.
+
+
+
+Q5. What is the difference between DELETE, TRUNCATE, and DROP?
+ans:- 
+     DELETE: Removes specific rows from a table based on a condition. It can be rolled back and does not affect the table structure.
+     TRUNCATE: Removes all rows from a table quickly and cannot be rolled back. It resets any auto-increment counters but does not affect the table structure.
+     DROP: Removes an entire table (or database) from the database, including its structure, data, and associated constraints. It cannot be rolled back.
+
+
+
+Q6. Explain the difference in their impact on the data and the structure of a table.
+ans:-
+     DELETE: Removes specific rows but keeps the table structure intact. Data can be rolled back if in a transaction.
+     TRUNCATE: Removes all rows and resets any auto-increment values but keeps the table structure intact. It cannot be rolled back.
+     DROP: Completely removes the table, including its data and structure. It cannot be rolled back.
+
+
+
+Q7. What is a JOIN? What are the different types of JOINs?
+ans:-
+     JOIN is an SQL operation that combines rows from two or more tables based on a related column.
+
+     The different types of JOINs are:
+     1. INNER JOIN: Returns only matching rows from both tables.
+     2. LEFT JOIN (or LEFT OUTER JOIN): Returns all rows from the left table and matching rows from the right table.
+     3. RIGHT JOIN (or RIGHT OUTER JOIN): Returns all rows from the right table and matching rows from the left table.
+     4. FULL JOIN (or FULL OUTER JOIN): Returns all rows when there is a match in either the left or right table.
+     5. CROSS JOIN: Returns the Cartesian product of both tables (all possible combinations).
+
+
+
+Q8. Discuss INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, and CROSS JOIN.
+ans:- 
+     1.INNER JOIN: Returns only the rows with matching values in both tables.
+     2.LEFT JOIN (LEFT OUTER JOIN): Returns all rows from the left table, and matching rows from the right table. Non-matching rows from the right table are returned as NULL.
+     3.RIGHT JOIN (RIGHT OUTER JOIN): Returns all rows from the right table, and matching rows from the left table. Non-matching rows from the left table are returned as NULL.
+     4.FULL OUTER JOIN: Returns all rows when there is a match in either table. Non-matching rows from both tables are returned as NULL.
+     5.CROSS JOIN: Returns the Cartesian product of both tables, i.e., all possible combinations of rows from both tables.
+
+
+
+Q9. What is a primary key and a foreign key?
+ans:- 
+     Primary Key: A unique identifier for each record in a table. It ensures that each row has a distinct value and cannot be NULL.
+     Foreign Key: A column in one table that references the primary key of another table. It establishes a relationship between the two tables.
+
+
+
+Q10. What is a NULL value in SQL?
+ans:-
+     NULLvalue in SQL represents the absence of a value or unknown data.It is not the same as an 
+     empty string or zero and is used when a value is missing or not applicable.
+
+
+
+Q11. Define NULL and how it differs from an empty string or zero.
+ans:-
+     NULL in SQL represents the absence of a value or unknown data.It indicates that the value is not defined.
+
+     It differs from:
+     Empty String (`''`): A string with no characters, but still a defined value.
+     Zero (`0`): A numeric value, indicating a valid but minimal number. 
+
+
+
+Q12. What is the difference between WHERE and HAVING?
+ans:-
+     WHERE filters rows before grouping.
+     HAVING filters groups after grouping with GROUP BY.
+
+
+
+Q13. Explain their usage in filtering results for rows vs groups.
+ans:-
+     WHERE filters individual rows.
+     HAVING filters results after aggregation (groups).
+
+
+
+Q14. What is a subquery?
+ans:-
+      A subquery is a query nested inside another query.
+
+
+
+Q15. Discuss the concept of a query inside another query, and when to use it.
+ans:-
+     A subquery is used to retrieve data for the outer query. It’s useful when results from one query are needed in another.
+
+
+
+Q16. What is the difference between UNION and UNION ALL?
+ans:-
+     UNION - combines results and removes duplicates.
+     UNION ALL - combines results including duplicates.
+
+
+
+Q17. Discuss the key difference in how duplicates are handled.
+ans:-
+     UNION removes duplicates.
+     UNION ALL keeps duplicates
+
+
+
+Q18. What is normalization?
+ans:-
+     Normalization is the process of organizing data to reduce redundancy and improve data integrity.
+
+
+
+Q19. Explain the concept of organizing data to reduce redundancy (1NF, 2NF, 3NF).
+ans:-
+     1NF: Eliminates duplicate rows, ensures atomicity.
+     2NF: Achieves 1NF and removes partial dependencies.
+     3NF: Achieves 2NF and removes transitive dependencies.
+
+
+
+
+
+             "Intermediate SQL Questions"
+
+
+
+
+Q20. What are indexes, and how do they work?
+ans:-
+     Indexes are structures that speed up data retrieval by allowing faster searching through columns.
+
+
+
+Q21. Discuss how indexes speed up query performance and their types (unique, composite).
+ans:-
+     Indexes speed up searches by creating a sorted structure.
+     Unique Index ensures uniqueness.
+     Composite Index is based on multiple columns.
+
+
+
+Q22. What is a VIEW?
+ans:-
+     A VIEW is a virtual table that displays data from a query, allowing simplified access to complex data.
+
+
+
+Q23. Define views and explain how they are used to simplify complex queries.
+ans:-
+     Views simplify complex queries by storing them as reusable objects and presenting them like tables.
+
+
+
+Q24. What is the difference between INNER JOIN and LEFT JOIN?
+ans:-
+     INNER JOIN returns only matching rows.
+     LEFT JOIN returns all rows from the left table and matching rows from the right table.
+
+
+
+Q25. Explain how data is selected when using these two joins.
+ans:-
+     INNER JOIN selects matching data from both tables.
+     LEFT JOIN selects all data from the left table, with matching data from the right table, or NULL if no match.
+
+
+
+Q26. What is a SELF JOIN?
+ans:-
+     A SELF JOIN is when a table is joined with itself to compare rows within the same table.
+
+
+
+Q27. Define a self-join and give an example of when it might be used.
+ans:-
+     A SELF JOIN compares rows in a table
+      e.g., finding employees who report to the same manager.
+
+
+
+Q28. Explain the concept of ACID properties in a transaction.
+ans:-
+     ACID stands for Atomicity, Consistency, Isolation, and Durability, ensuring reliable transactions.
+
+
+
+Q29. Discuss Atomicity, Consistency, Isolation, and Durability.
+ans:-
+     Atomicity: Ensures all or nothing of a transaction.
+     Consistency: Ensures database integrity is maintained.
+     Isolation: Ensures transactions do not interfere with each other.
+     Durability: Guarantees that changes are permanent once committed.
+ 
+
+
+Q30. What are aggregate functions in SQL? Give examples.
+ans:-
+     Aggregate functions perform calculations on multiple rows and return a single result. 
+     Examples: COUNT(), SUM(), AVG(), MIN(), MAX().
+
+
+
+Q31. Discuss functions like COUNT(), SUM(), AVG(), MIN(), and MAX().
+ans:-
+     COUNT(): Returns the number of rows.
+     SUM(): Returns the sum of values.
+     AVG(): Returns the average of values.
+     MIN(): Returns the smallest value.
+     MAX(): Returns the largest value.
+
+
+
+Q32. What are window functions in SQL?
+ans:-
+     Window functions perform calculations across a set of table rows related to the current row, 
+     without collapsing them into a single result.
+
+
+
+Q33. Explain OVER() clauses and their use in calculations across a set of table rows.
+ans:-
+    The OVER() clause defines the window for window functions, 
+    allowing calculations over specified rows, like calculating running totals or ranks.
+
+
+
+Q34. How do you find duplicate records in a table?
+ans:-
+    Use GROUP BY with HAVING COUNT(*) > 1 to identify duplicate rows.
+
+
+
+Q35. Use GROUP BY and HAVING to identify duplicates.
+ans:-
+     Example:
+     SELECT column1, column2, COUNT(*) FROM table GROUP BY column1, column2 HAVING COUNT(*) > 1;
+
+
+
+Q36. What is a CASE statement in SQL?
+ans:-
+     The CASE statement allows conditional logic to return values based on conditions.
+
+
+
+Q37. Explain how to use CASE for conditional logic in queries.
+ans:-
+
+
+
+Q38. What is a CROSS JOIN?
+ans:-
+     A CROSS JOIN returns the Cartesian product of two tables,
+     combining every row from one table with every row from the other.
+     resulting in all possible combinations.
+
+
+
+Q39. Discuss how CROSS JOIN returns the Cartesian product of two tables.
+ans:-
+     Each row from the first table is combined with every row from the second table, 
+     resulting in all possible combinations.
+
+
+
+
+              "Advanced SQL Questions"
+
+
+
+
+Q40. What is a recursive query in SQL?
+ans:-
+     A recursive query is a query that references itself to retrieve hierarchical or recursive data.
+
+
+Q41. Explain how to write recursive queries using WITH and CTE (Common Table Expressions).
+ans:-
+
+
+
+Q42. Explain the difference between RANK(), DENSE_RANK(), and ROW_NUMBER() functions.
+ans:-
+     RANK(): Assigns a unique rank but skips rank values for ties.
+     DENSE_RANK(): Assigns unique ranks without skipping for ties.
+     ROW_NUMBER(): Assigns a unique row number to each row, with no ties.
+
+
+
+Q43. Discuss their behavior in handling ties and row numbering.
+ans:-
+     RANK() skips numbers for ties,
+     DENSE_RANK() does not, 
+     ROW_NUMBER() assigns unique numbers to each row, regardless of ties.
+
+
+
+Q44. What are triggers in SQL?
+ans:-
+     Triggers are automatic actions that are executed in response to events on a table,
+     such as INSERT, UPDATE, or DELETE.
+
+
+
+Q45. Explain how triggers work and give examples of BEFORE, AFTER, and INSTEAD OF triggers.
+ans:-
+     BEFORE: Executes before the action.
+     AFTER: Executes after the action.
+     INSTEAD OF: Executes instead of the action.
+
+
+
+Q46. What is the difference between INNER JOIN and OUTER JOIN?
+ans:-
+     INNER JOIN returns only matching rows,
+     while OUTER JOIN includes non-matching rows as well, with NULLs for missing values.
+
+
+
+Q47. Explain the concept and the types of outer joins: LEFT, RIGHT, FULL OUTER.
+ans:-
+     LEFT JOIN: Returns all rows from the left table and matching rows from the right.
+     RIGHT JOIN: Returns all rows from the right table and matching rows from the left.
+     FULL OUTER JOIN: Returns all rows when there’s a match in either table.
+
+
+
+Q48. How would you optimize a slow SQL query?
+ans:-
+     Use indexes, query rewriting, avoid subqueries, and analyze execution plans.
+
+
+
+Q49. Discuss approaches like indexing, query rewriting, avoiding subqueries, and analyzing execution plans.
+ans:-
+     Indexing: Speeds up searches.
+     Query rewriting: Improves performance by simplifying queries.
+     Avoiding subqueries: Reduces complexity.
+     Analyzing execution plans: Identifies bottlenecks.
+
+
+
+Q50. What is a database deadlock, and how do you handle it?
+ans:-
+     A deadlock occurs when two transactions are waiting for each other to release resources.
+     Resolve by managing transaction isolation levels and using lock management.
+
+
+
+Q51. Explain what deadlocks are and how to resolve them (e.g., transaction isolation levels, lock management).
+ans:-
+     Deadlocks can be avoided by adjusting isolation levels and using locking strategies to prevent circular dependencies.
+
+
+
+Q52. What are the different types of indexes in SQL?
+ans:-
+     B-tree, Bitmap, Hash, Clustered, and Non-clustered are common types of indexes.
+
+
+
+Q53. Discuss different indexing techniques like B-tree, Bitmap, and Hash indexes.
+ans:-
+     B-tree: Balanced tree, good for range queries.
+     Bitmap: Efficient for columns with few distinct values.
+     Hash: Fast lookup for equality searches.
+
+
+
+Q54. What are the differences between CHAR and VARCHAR data types?
+ans:-
+     CHAR is fixed-length, 
+     while VARCHAR is variable-length, saving space when data varies in length.
+
+
+
+Q55. Explain the storage and performance differences between fixed-length and variable-length strings.
+ans:-
+     Fixed-length strings (CHAR) waste space if data is shorter than the set length. 
+     Variable-length strings (VARCHAR) save space but may have a slight performance cost for storage.
+
+
+
+Q56. How do you handle large datasets in SQL?
+ans:-
+     Use partitioning,
+     batch processing,
+     indexing.
+     to manage large datasets efficiently.
+
+
+
+Q57. Discuss techniques like partitioning, batch processing, and indexing to handle large volumes of data efficiently.
+ans:-
+     Partitioning splits data into manageable sections.
+     Batch processing handles data in chunks.
+     Indexing speeds up access to large datasets.
+
+
+
+Q58. What is the EXPLAIN command in SQL?
+ans:-
+     he EXPLAIN command shows the execution plan of a query, helping to understand how SQL queries are processed.
+
+
+
+Q59. Discuss how EXPLAIN can be used to analyze the execution plan of a query and optimize performance.
+ans:-
+     EXPLAIN helps identify inefficient query steps and guides optimization strategies like adding indexes or rewriting the query.
+
+
+
+
+
+
+
+
+
+
