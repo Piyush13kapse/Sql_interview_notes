@@ -17,20 +17,20 @@ ans:-
 Q3. What are the different types of SQL statements?
 ans:-
      The different types of SQL statements are:
-     1. DQL (Data Query Language)**: `SELECT` (used to query data)
-     2. DML (Data Manipulation Language)**: `INSERT`, `UPDATE`, `DELETE` (used to manipulate data)
-     3. DDL (Data Definition Language)**: `CREATE`, `ALTER`, `DROP` (used to define or modify database structures)
-     4. DCL (Data Control Language)**: `GRANT`, `REVOKE` (used to manage permissions)
-     5. TCL (Transaction Control Language)**: `COMMIT`, `ROLLBACK`, `SAVEPOINT` (used to manage transactions)
+     1. DQL (Data Query Language): `SELECT` (used to query data)
+     2. DML (Data Manipulation Language): `INSERT`, `UPDATE`, `DELETE` (used to manipulate data)
+     3. DDL (Data Definition Language): `CREATE`, `ALTER`, `DROP` (used to define or modify database structures)
+     4. DCL (Data Control Language): `GRANT`, `REVOKE` (used to manage permissions)
+     5. TCL (Transaction Control Language): `COMMIT`, `ROLLBACK`, `SAVEPOINT` (used to manage transactions)
 
 
 
 Q4. Discuss DDL (Data Definition Language), DML (Data Manipulation Language), DCL (Data Control Language), and TCL (Transaction Control Language).
 ans:-
-     DDL (Data Definition Language)**: Defines and manages database structures. Commands include `CREATE`, `ALTER`, `DROP`.
-     DML (Data Manipulation Language)**: Manages data within the database. Commands include `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
-     DCL (Data Control Language)**: Controls access to data. Commands include `GRANT` (give permissions) and `REVOKE` (remove permissions).
-     TCL (Transaction Control Language)**: Manages transactions within the database. Commands include `COMMIT`, `ROLLBACK`, and `SAVEPOINT`.
+     DDL (Data Definition Language): Defines and manages database structures. Commands include `CREATE`, `ALTER`, `DROP`.
+     DML (Data Manipulation Language): Manages data within the database. Commands include `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
+     DCL (Data Control Language): Controls access to data. Commands include `GRANT` (give permissions) and `REVOKE` (remove permissions).
+     TCL (Transaction Control Language): Manages transactions within the database. Commands include `COMMIT`, `ROLLBACK`, and `SAVEPOINT`.
 
 
 
