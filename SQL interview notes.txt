@@ -277,7 +277,16 @@ ans:-
 
 
 Q37. Explain how to use CASE for conditional logic in queries.
-ans:-
+ans:-SELECT 
+    EmployeeID,
+    Salary,
+    CASE 
+        WHEN Salary > 50000 THEN 'High Salary'
+        WHEN Salary BETWEEN 30000 AND 50000 THEN 'Average Salary'
+        ELSE 'Low Salary'
+    END AS SalaryCategory
+FROM Employees;
+
 
 
 
